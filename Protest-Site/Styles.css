@@ -1,0 +1,105 @@
+Styles.css 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.Headline {
+    background-color: #0000FF;
+    padding: 20px;
+    color: #fff;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.content {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.left-boxes, .right-boxes {
+    float: left; /* Float's both DO NOT CHANGE ME */
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+.right-boxes {
+    float: right; /* Float the right boxes to the right */
+}
+
+/* MAKE BOXES PRETTY */
+.box {
+    background-color: #FFFFED;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    height: 300px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+    flex-grow: 1; /* Makes the text boxes fill the entire space, neat trick */
+    text-align: left;
+}
+
+img {
+max-width: 100%;  
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%
+   
+
+ 
+
+}
+
+/* Clear the float in the container */
+.content::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media (max-width: 768px) {
+    .content {
+        width: 100%; /* Make the content container take up the full width on small screens */
+    }
+
+    .left-boxes, .right-boxes {
+        float: none; /* Remove floats */
+        width: 100%; /* Make the boxes stack vertically */
+        margin-bottom: 20px;
+    }
+}
